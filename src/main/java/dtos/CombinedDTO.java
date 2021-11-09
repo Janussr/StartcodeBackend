@@ -2,22 +2,15 @@ package dtos;
 
 public class CombinedDTO {
     private CatDTO catDTO;
-    private CoffeeDTO coffeeDTO;
     private DogDTO dogDTO;
     private DuckDTO duckDTO;
     private FoxDTO foxDTO;
 
-    public CombinedDTO(CatDTO catDTO, CoffeeDTO coffeeDTO, DogDTO dogDTO, DuckDTO duckDTO, FoxDTO foxDTO) {
+    public CombinedDTO(CatDTO catDTO, DogDTO dogDTO, DuckDTO duckDTO, FoxDTO foxDTO) {
         this.catDTO = catDTO;
-        this.coffeeDTO = coffeeDTO;
         this.dogDTO = dogDTO;
         this.duckDTO = duckDTO;
         this.foxDTO = foxDTO;
-    }
-
-    public CombinedDTO(CatDTO catDTO, DuckDTO duckDTO) {
-        this.catDTO = catDTO;
-        this.duckDTO = duckDTO;
     }
 
     public CatDTO getCatDTO() {
@@ -28,13 +21,6 @@ public class CombinedDTO {
         this.catDTO = catDTO;
     }
 
-    public CoffeeDTO getCoffeeDTO() {
-        return coffeeDTO;
-    }
-
-    public void setCoffeeDTO(CoffeeDTO coffeeDTO) {
-        this.coffeeDTO = coffeeDTO;
-    }
 
     public DogDTO getDogDTO() {
         return dogDTO;

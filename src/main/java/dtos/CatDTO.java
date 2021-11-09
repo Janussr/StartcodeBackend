@@ -3,10 +3,6 @@ package dtos;
 public class CatDTO {
     private String file;
 
-
-    public CatDTO() {
-    }
-
     public CatDTO(String file) {
         this.file = file;
     }

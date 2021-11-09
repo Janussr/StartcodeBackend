@@ -3,9 +3,6 @@ package dtos;
 public class DogDTO {
     private String url;
 
-    public DogDTO() {
-    }
-
     public DogDTO(String url) {
         this.url = url;
     }
