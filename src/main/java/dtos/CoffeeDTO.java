@@ -1,7 +1,6 @@
 package dtos;
 
 public class CoffeeDTO {
-
     private String file;
 
     public CoffeeDTO(String file) {

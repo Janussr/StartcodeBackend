@@ -41,7 +41,7 @@ public class AnimalsResource {
         CombinedDTO combinedDTO = new CombinedDTO(catDTO,  duckDTO);
 
 
-        
+
         return gson.toJson(combinedDTO);
     }
 
