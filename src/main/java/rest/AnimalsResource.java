@@ -34,17 +34,9 @@ public class AnimalsResource {
         String duck = HttpUtils.fetchData("https://random-d.uk/api/random");
         DuckDTO duckDTO = gson.fromJson(duck, DuckDTO.class);
 
-        String coffee = HttpUtils.fetchData("https://coffee.alexflipnote.dev/random.json");
-        CoffeeDTO coffeeDTO = gson.fromJson(coffee, CoffeeDTO.class);
-
-        //CombinedDTO combinedDTO = new CombinedDTO(catDTO, coffeeDTO, dogDTO, duckDTO, foxDTO);
-        CombinedDTO combinedDTO = new CombinedDTO(catDTO,  duckDTO);
-
+        CombinedDTO combinedDTO = new CombinedDTO(catDTO, dogDTO, duckDTO, foxDTO);
 
 
         return gson.toJson(combinedDTO);
     }
-
-
-
-    }
+}

@@ -3,9 +3,6 @@ package dtos;
 public class FoxDTO {
     private String image;
 
-    public FoxDTO() {
-    }
-
     public FoxDTO(String image) {
         this.image = image;
     }
