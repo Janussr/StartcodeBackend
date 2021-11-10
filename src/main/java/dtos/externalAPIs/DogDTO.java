@@ -1,10 +1,9 @@
-package dtos;
+package dtos.externalAPIs;
 
-public class DuckDTO {
-
+public class DogDTO {
     private String url;
 
-    public DuckDTO(String url) {
+    public DogDTO(String url) {
         this.url = url;
     }
 

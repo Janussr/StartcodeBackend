@@ -1,7 +1,7 @@
 package rest;
 
 import com.google.gson.Gson;
-import dtos.*;
+import dtos.externalAPIs.*;
 import utils.HttpUtils;
 
 import javax.ws.rs.*;

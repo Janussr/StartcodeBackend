@@ -21,13 +21,7 @@ public class FacadeExample {
     
     //Private Constructor to ensure Singleton
     private FacadeExample() {}
-    
-    
-    /**
-     * 
-     * @param _emf
-     * @return an instance of this facade class.
-     */
+
     public static FacadeExample getFacadeExample(EntityManagerFactory _emf) {
         if (instance == null) {
             emf = _emf;

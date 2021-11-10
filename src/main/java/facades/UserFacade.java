@@ -1,13 +1,12 @@
 package facades;
 
 import entities.User;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+
 import security.errorhandling.AuthenticationException;
 
-/**
- * @author lam@cphbusiness.dk
- */
 public class UserFacade {
 
     private static EntityManagerFactory emf;
@@ -16,11 +15,6 @@ public class UserFacade {
     private UserFacade() {
     }
 
-    /**
-     *
-     * @param _emf
-     * @return the instance of this facade.
-     */
     public static UserFacade getUserFacade(EntityManagerFactory _emf) {
         if (instance == null) {
             emf = _emf;
@@ -29,7 +23,7 @@ public class UserFacade {
         return instance;
     }
 
-    public User getVeryfiedUser(String username, String password) throws AuthenticationException {
+    public User getVerifiedUser(String username, String password) throws AuthenticationException {
         EntityManager em = emf.createEntityManager();
         User user;
         try {
@@ -42,5 +36,4 @@ public class UserFacade {
         }
         return user;
     }
-
 }

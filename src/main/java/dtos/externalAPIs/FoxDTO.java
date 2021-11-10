@@ -1,4 +1,4 @@
-package dtos;
+package dtos.externalAPIs;
 
 public class FoxDTO {
     private String image;

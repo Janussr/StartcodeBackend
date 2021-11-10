@@ -1,4 +1,4 @@
-package dtos;
+package dtos.externalAPIs;
 
 public class CatDTO {
     private String file;
