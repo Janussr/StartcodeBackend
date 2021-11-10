@@ -76,11 +76,11 @@ public class UserResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("user")
+    @Path("currentuser")
     @RolesAllowed("user")
     public String getUser() {
-        String currentUser = securityContext.getUserPrincipal().getName();
-        return currentUser;
+        String thisuser = securityContext.getUserPrincipal().getName();
+        return gson.toJson(thisuser);
     }
 
     @GET
