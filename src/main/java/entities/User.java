@@ -70,11 +70,11 @@ public class User implements Serializable {
     }
 
     public String getUserPass() {
-        return this.userPass = BCrypt.hashpw(userPass, BCrypt.gensalt());
+        return this.userPass;
     }
 
     public void setUserPass(String userPass) {
-        this.userPass = userPass;
+        this.userPass = BCrypt.hashpw(userPass, BCrypt.gensalt());
     }
 
     public List<Role> getRoleList() {
