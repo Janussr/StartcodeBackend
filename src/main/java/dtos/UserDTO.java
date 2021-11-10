@@ -1,6 +1,6 @@
 package dtos;
 
-import entities.Role;
+import dtos.Role.RoleDTO;
 import entities.User;
 
 import java.util.List;

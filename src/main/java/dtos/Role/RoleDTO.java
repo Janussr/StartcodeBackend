@@ -1,4 +1,4 @@
-package dtos;
+package dtos.Role;
 
 import entities.Role;
 
