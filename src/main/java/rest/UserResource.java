@@ -21,10 +21,8 @@ import javax.ws.rs.core.SecurityContext;
 import facades.UserFacade;
 import utils.EMF_Creator;
 
-/**
- * @author lam@cphbusiness.dk
- */
-@Path("info")
+
+@Path("user")
 public class UserResource {
 
     private static final EntityManagerFactory EMF = EMF_Creator.createEntityManagerFactory();
@@ -60,7 +58,7 @@ public class UserResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("user")
+    @Path("userinfo")
     @RolesAllowed("user")
     public String getFromUser() {
         String thisuser = securityContext.getUserPrincipal().getName();
@@ -69,11 +67,20 @@ public class UserResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("admin")
+    @Path("admininfo")
     @RolesAllowed("admin")
     public String getFromAdmin() {
         String thisuser = securityContext.getUserPrincipal().getName();
         return "{\"msg\": \"Hello to (admin) User: " + thisuser + "\"}";
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("user")
+    @RolesAllowed("user")
+    public String getUser() {
+        String currentUser = securityContext.getUserPrincipal().getName();
+        return currentUser;
     }
 
     @GET

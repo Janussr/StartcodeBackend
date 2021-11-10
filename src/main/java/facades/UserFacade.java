@@ -44,12 +44,13 @@ public class UserFacade {
         return user;
     }
 
-    public RolesDTO getRolesByUsername(String username) throws WebApplicationException {
+    public RolesDTO getRolesByUsername(String username) {
         EntityManager em = emf.createEntityManager();
         try {
             TypedQuery<Role> query = em.createQuery("SELECT r from Role r JOIN r.userList u WHERE u.userName =:user_name ", Role.class);
             query.setParameter("user_name", username);
             List<Role> roles = query.getResultList();
+
             return new RolesDTO(roles);
 
         } finally {
