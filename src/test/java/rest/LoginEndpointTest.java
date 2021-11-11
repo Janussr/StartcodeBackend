@@ -198,7 +198,7 @@ public class LoginEndpointTest {
                 .contentType("application/json")
                 .header("x-access-token", securityToken)
                 .when()
-                .get("/user/useradmin").then()
+                .get("/user/userinfo").then()
                 .statusCode(200)
                 .body("msg", equalTo("Hello to User: user_admin"));
     }
